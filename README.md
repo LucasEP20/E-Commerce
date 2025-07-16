@@ -13,6 +13,7 @@ Además, se implementó una base del sistema utilizando TypeScript con NestJS pa
 
 - **Lenguaje:** TypeScript
 - **Framework Backend:** NestJS
+- **ORM:** typeORM
 - **Base de Datos:** PostgreSQL
 - **Frontend:** React + Tailwind
 - **Modelado UML:** Enterprise Architect/StarUML
