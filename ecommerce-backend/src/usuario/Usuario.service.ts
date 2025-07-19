@@ -1,11 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } => 'typeorm';
-import { Usuario } from '../entities/Usuario';
+import { Repository } from 'typeorm';
+import { Usuario } from '../entidades/usuario';
 
 @Injectable()
-export class UsuarioService {}
-  constructor(@InjectRepository(Usuario) private readonly UsuarioRepository: Repository<Usuario>) {}
+export class UsuarioService {
+  constructor(
+    @InjectRepository(Usuario)
+    private readonly UsuarioRepository: Repository<Usuario>,
+  ) { }
 
   findAll(): Promise<Usuario[]> {
     return this.UsuarioRepository.find();
@@ -18,3 +21,4 @@ export class UsuarioService {}
   create(Usuario: Partial<Usuario>): Promise<Usuario> {
     return this.UsuarioRepository.save(Usuario);
   }
+}

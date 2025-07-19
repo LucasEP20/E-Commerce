@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } => 'typeorm';
-import { Pedido } from '../entities/Pedido';
+import { Repository } from 'typeorm';
+import { Pedido } from '../entidades/pedido';
 
 @Injectable()
-export class PedidoService {}
-  constructor(@InjectRepository(Pedido) private readonly PedidoRepository: Repository<Pedido>) {}
+export class PedidoService {
+  constructor(@InjectRepository(Pedido) private readonly PedidoRepository: Repository<Pedido>) { }
 
   findAll(): Promise<Pedido[]> {
     return this.PedidoRepository.find();
@@ -18,3 +18,4 @@ export class PedidoService {}
   create(Pedido: Partial<Pedido>): Promise<Pedido> {
     return this.PedidoRepository.save(Pedido);
   }
+}

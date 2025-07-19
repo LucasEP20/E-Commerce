@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
-import { ItemCarrito } from "./ItemCarrito";
+import { ItemCarrito } from "../entidades/itemCarrito";
 
 @Entity()
 export class Carrito {

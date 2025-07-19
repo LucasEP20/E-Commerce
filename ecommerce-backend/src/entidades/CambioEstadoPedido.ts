@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToOne } from "typeorm";
-import { Pedido } from "./Pedido";
-import { EstadoPedido } from "./EstadoPedido";
+import { Pedido } from "../entidades/pedido";
+import { EstadoPedido } from "../entidades/estadoPedido";
 
 
 @Entity()
@@ -20,7 +20,7 @@ export class CambioEstadoPedido {
     horaCambio!: Date;
 
     // Un cambio de estado pertenece a un pedido
-    @ManyToOne(() => Pedido, (pedido) => pedido.cambiosEstado, { eager: true })
+    @ManyToOne(() => Pedido, (pedido) => pedido.cambiosEstado)
     pedido!: Pedido;
 
     //Un cambio de estado esta asociado a un estado

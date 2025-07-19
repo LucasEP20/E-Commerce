@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToOne, ManyToOne } from "typeorm";
-import { Producto } from "./Producto";
-import { Carrito } from "./Carrito";
+import { Producto } from "../entidades/producto";
+import { Carrito } from "../entidades/carrito";
 
 @Entity()
 export class ItemCarrito {
@@ -25,6 +25,6 @@ export class ItemCarrito {
 
     @OneToOne(() => Producto, { eager: true })
     producto!: Producto;
-    @ManyToOne(() => Carrito, (carrito) => carrito.id, { eager: true })
+    @ManyToOne(() => Carrito, (carrito) => carrito.id)
     carrito!: Carrito;
 }

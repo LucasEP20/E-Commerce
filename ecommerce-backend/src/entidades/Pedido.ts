@@ -1,8 +1,8 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToOne, OneToMany } from "typeorm";
-import { Usuario } from "./Usuario";
-import { Carrito } from "./Carrito";
-import { CambioEstadoPedido } from "./CambioEstadoPedido";
-import { EstadoPedido } from "./EstadoPedido";
+import { Usuario } from "../entidades/usuario";
+import { Carrito } from "../entidades/carrito";
+import { CambioEstadoPedido } from "../entidades/cambioEstadoPedido";
+import { EstadoPedido } from "../entidades/estadoPedido";
 
 @Entity()
 export class Pedido {

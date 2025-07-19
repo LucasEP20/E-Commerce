@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } => 'typeorm';
-import { Carrito } from '../entities/Carrito';
+import { Repository } from 'typeorm';
+import { Carrito } from '../entidades/carrito';
 
 @Injectable()
-export class CarritoService {}
-  constructor(@InjectRepository(Carrito) private readonly CarritoRepository: Repository<Carrito>) {}
+export class CarritoService {
+  constructor(@InjectRepository(Carrito) private readonly CarritoRepository: Repository<Carrito>) { }
 
   findAll(): Promise<Carrito[]> {
     return this.CarritoRepository.find();
@@ -18,3 +18,4 @@ export class CarritoService {}
   create(Carrito: Partial<Carrito>): Promise<Carrito> {
     return this.CarritoRepository.save(Carrito);
   }
+}
