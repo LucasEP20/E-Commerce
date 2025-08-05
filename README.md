@@ -1,4 +1,4 @@
-# E-comerc 2025
+# E-commerce 2025
 
 Proyecto personal para expandir mis habilidades full stack
 
