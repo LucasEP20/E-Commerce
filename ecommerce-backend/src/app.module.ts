@@ -1,11 +1,10 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
-import { glob } from 'fs';
 
+import { glob } from 'fs';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
 
 //entidades
 import { Usuario } from './entidades/usuario';
@@ -17,6 +16,7 @@ import { Producto } from './entidades/producto';
 import { ItemCarrito } from './entidades/itemCarrito';
 import { CategoriaProducto } from './entidades/categoriaProducto';
 
+//modulos
 import { CategoriaProductoModule } from './categoria-producto/categoria-producto.module';
 import { CambioEstadoPedidoModule } from './cambio-estado-pedido/cambio-estado-pedido.module';
 import { ProductoModule } from './producto/Producto.module';
@@ -61,15 +61,9 @@ import { ItemCarritoModule } from './item-carrito/item-carrito.module';
     CategoriaProductoModule,
     CambioEstadoPedidoModule,
     ProductoModule,
-    CarritoModule,
     UsuarioModule,
     PedidoModule,
-    UsuarioModule,
     EstadoPedidoModule,
-    CambioEstadoPedidoModule,
-    CarritoModule,
-    ProductoModule,
-    CategoriaProductoModule,
     ItemCarritoModule,
 
   ],
