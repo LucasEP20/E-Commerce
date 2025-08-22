@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Carrito } from '../entidades/carrito';
+import { Carrito } from '../entidades/Carrito';
 import { CarritoController } from './carrito.controller';
 import { CarritoService } from './Carrito.service';
 

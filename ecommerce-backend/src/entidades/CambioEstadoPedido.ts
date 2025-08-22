@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToOne } from "typeorm";
-import { Pedido } from "../entidades/pedido";
-import { EstadoPedido } from "../entidades/estadoPedido";
+import { Pedido } from "../entidades/Pedido";
+import { EstadoPedido } from "../entidades/EstadoPedido";
 
 
 @Entity()

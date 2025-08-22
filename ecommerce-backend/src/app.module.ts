@@ -8,14 +8,14 @@ import { glob } from 'fs';
 
 
 //entidades
-import { Usuario } from './entidades/usuario';
-import { Pedido } from './entidades/pedido';
-import { CambioEstadoPedido } from './entidades/cambioEstadoPedido';
-import { EstadoPedido } from './entidades/estadoPedido';
-import { Carrito } from './entidades/carrito';
-import { Producto } from './entidades/producto';
-import { ItemCarrito } from './entidades/itemCarrito';
-import { CategoriaProducto } from './entidades/categoriaProducto';
+import { Usuario } from './entidades/Usuario';
+import { Pedido } from './entidades/Pedido';
+import { CambioEstadoPedido } from './entidades/CambioEstadoPedido';
+import { EstadoPedido } from './entidades/EstadoPedido';
+import { Carrito } from './entidades/Carrito';
+import { Producto } from './entidades/Producto';
+import { ItemCarrito } from './entidades/ItemCarrito';
+import { CategoriaProducto } from './entidades/CategoriaProducto';
 
 import { CategoriaProductoModule } from './categoria-producto/categoria-producto.module';
 import { CambioEstadoPedidoModule } from './cambio-estado-pedido/cambio-estado-pedido.module';

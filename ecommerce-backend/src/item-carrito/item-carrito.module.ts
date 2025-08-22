@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ItemCarritoController } from './item-carrito.controller';
 import { ItemCarritoService } from './item-carrito.service';
-import { ItemCarrito } from 'src/entidades/itemCarrito';
+import { ItemCarrito } from 'src/entidades/ItemCarrito';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
